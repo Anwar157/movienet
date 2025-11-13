@@ -1,0 +1,503 @@
+{
+  "Action": [
+    {
+      "id": 1,
+      "title": "Shadow Protocol",
+      "description": "A secret agent uncovers a global conspiracy that could ignite a world war.",
+      "poster": "https://picsum.photos/id/1011/500/750",
+      "category": "Action",
+      "type": "Premium",
+      "rating": 8.2,
+      "releaseYear": 2022,
+      "size": "1.4 GB",
+      "downloadLink": "https://example.com/download/shadow-protocol"
+    },
+    {
+      "id": 2,
+      "title": "Crimson Chase",
+      "description": "A fearless cop hunts down a ruthless mafia boss ruling the city’s underworld.",
+      "poster": "https://picsum.photos/id/1012/500/750",
+      "category": "Action",
+      "type": "Free",
+      "rating": 7.9,
+      "releaseYear": 2021,
+      "size": "1.2 GB",
+      "downloadLink": "https://example.com/download/crimson-chase"
+    },
+    {
+      "id": 3,
+      "title": "Iron Claw",
+      "description": "An ex-soldier returns home only to find his family trapped by a powerful cartel.",
+      "poster": "https://picsum.photos/id/1013/500/750",
+      "category": "Action",
+      "type": "Premium",
+      "rating": 8.5,
+      "releaseYear": 2023,
+      "size": "1.6 GB",
+      "downloadLink": "https://example.com/download/iron-claw"
+    },
+    {
+      "id": 4,
+      "title": "Black Horizon",
+      "description": "A rogue pilot must stop a terrorist group from launching a deadly satellite weapon.",
+      "poster": "https://picsum.photos/id/1015/500/750",
+      "category": "Action",
+      "type": "Free",
+      "rating": 7.6,
+      "releaseYear": 2020,
+      "size": "1.1 GB",
+      "downloadLink": "https://example.com/download/black-horizon"
+    }
+  ],
+  "Adventure": [
+    {
+      "id": 5,
+      "title": "Lost Island",
+      "description": "A group of explorers discover a mysterious island full of ancient secrets.",
+      "poster": "https://picsum.photos/id/1021/500/750",
+      "category": "Adventure",
+      "type": "Free",
+      "rating": 7.8,
+      "releaseYear": 2021,
+      "size": "1.3 GB",
+      "downloadLink": "https://example.com/download/lost-island"
+    },
+    {
+      "id": 6,
+      "title": "Echoes of the Wild",
+      "description": "An adventurer must survive in a jungle filled with hidden dangers and forgotten tribes.",
+      "poster": "https://picsum.photos/id/1022/500/750",
+      "category": "Adventure",
+      "type": "Premium",
+      "rating": 8.3,
+      "releaseYear": 2022,
+      "size": "1.5 GB",
+      "downloadLink": "https://example.com/download/echoes-of-the-wild"
+    },
+    {
+      "id": 7,
+      "title": "Skybound",
+      "description": "A young pilot embarks on a daring mission across the world’s most dangerous skies.",
+      "poster": "https://picsum.photos/id/1023/500/750",
+      "category": "Adventure",
+      "type": "Free",
+      "rating": 7.5,
+      "releaseYear": 2020,
+      "size": "1.1 GB",
+      "downloadLink": "https://example.com/download/skybound"
+    },
+    {
+      "id": 8,
+      "title": "Beyond the Canyon",
+      "description": "A team of explorers dives deep into the uncharted Grand Canyon tunnels.",
+      "poster": "https://picsum.photos/id/1024/500/750",
+      "category": "Adventure",
+      "type": "Premium",
+      "rating": 8.0,
+      "releaseYear": 2023,
+      "size": "1.4 GB",
+      "downloadLink": "https://example.com/download/beyond-the-canyon"
+    }
+  ],
+  "Sci-Fi": [
+    {
+      "id": 9,
+      "title": "Nova Prime",
+      "description": "In a distant future, humanity fights for survival on a new planet.",
+      "poster": "https://picsum.photos/id/1031/500/750",
+      "category": "Sci-Fi",
+      "type": "Premium",
+      "rating": 8.7,
+      "releaseYear": 2024,
+      "size": "1.8 GB",
+      "downloadLink": "https://example.com/download/nova-prime"
+    },
+    {
+      "id": 10,
+      "title": "Stellar Drift",
+      "description": "A spaceship crew gets lost in an alternate galaxy and must find a way back home.",
+      "poster": "https://picsum.photos/id/1032/500/750",
+      "category": "Sci-Fi",
+      "type": "Free",
+      "rating": 7.9,
+      "releaseYear": 2022,
+      "size": "1.5 GB",
+      "downloadLink": "https://example.com/download/stellar-drift"
+    },
+    {
+      "id": 11,
+      "title": "Quantum Storm",
+      "description": "Scientists open a wormhole that connects Earth to a dangerous alien world.",
+      "poster": "https://picsum.photos/id/1033/500/750",
+      "category": "Sci-Fi",
+      "type": "Premium",
+      "rating": 8.5,
+      "releaseYear": 2021,
+      "size": "1.6 GB",
+      "downloadLink": "https://example.com/download/quantum-storm"
+    },
+    {
+      "id": 12,
+      "title": "Eclipse Protocol",
+      "description": "A rogue AI threatens to erase all human history in the digital world.",
+      "poster": "https://picsum.photos/id/1034/500/750",
+      "category": "Sci-Fi",
+      "type": "Free",
+      "rating": 8.1,
+      "releaseYear": 2020,
+      "size": "1.3 GB",
+      "downloadLink": "https://example.com/download/eclipse-protocol"
+    }
+  ],
+  "Comedy": [
+    {
+      "id": 13,
+      "title": "Laugh Riot",
+      "description": "A group of friends find themselves in hilarious situations during a road trip.",
+      "poster": "https://picsum.photos/id/1041/500/750",
+      "category": "Comedy",
+      "type": "Free",
+      "rating": 7.8,
+      "releaseYear": 2021,
+      "size": "1.2 GB",
+      "downloadLink": "https://example.com/download/laugh-riot"
+    },
+    {
+      "id": 14,
+      "title": "Office Chaos",
+      "description": "An awkward intern causes endless comedic problems in a busy office.",
+      "poster": "https://picsum.photos/id/1042/500/750",
+      "category": "Comedy",
+      "type": "Premium",
+      "rating": 8.1,
+      "releaseYear": 2020,
+      "size": "1.4 GB",
+      "downloadLink": "https://example.com/download/office-chaos"
+    },
+    {
+      "id": 15,
+      "title": "Holiday Madness",
+      "description": "A family vacation goes wrong in the most unexpected and funny ways.",
+      "poster": "https://picsum.photos/id/1043/500/750",
+      "category": "Comedy",
+      "type": "Free",
+      "rating": 7.5,
+      "releaseYear": 2022,
+      "size": "1.3 GB",
+      "downloadLink": "https://example.com/download/holiday-madness"
+    },
+    {
+      "id": 16,
+      "title": "Comedy Club",
+      "description": "A stand-up comedian struggles with fame, friends, and love while performing nightly.",
+      "poster": "https://picsum.photos/id/1044/500/750",
+      "category": "Comedy",
+      "type": "Premium",
+      "rating": 8.0,
+      "releaseYear": 2023,
+      "size": "1.5 GB",
+      "downloadLink": "https://example.com/download/comedy-club"
+    }
+  ],
+  "Romance": [
+    {
+      "id": 17,
+      "title": "Love in Paris",
+      "description": "Two strangers meet in Paris and embark on a romantic adventure.",
+      "poster": "https://picsum.photos/id/1051/500/750",
+      "category": "Romance",
+      "type": "Free",
+      "rating": 8.3,
+      "releaseYear": 2021,
+      "size": "1.3 GB",
+      "downloadLink": "https://example.com/download/love-in-paris"
+    },
+    {
+      "id": 18,
+      "title": "Summer Hearts",
+      "description": "A summer romance blossoms between two college students from different worlds.",
+      "poster": "https://picsum.photos/id/1052/500/750",
+      "category": "Romance",
+      "type": "Premium",
+      "rating": 8.0,
+      "releaseYear": 2022,
+      "size": "1.4 GB",
+      "downloadLink": "https://example.com/download/summer-hearts"
+    },
+    {
+      "id": 19,
+      "title": "Secret Letters",
+      "description": "A woman finds love through mysterious letters left at her doorstep.",
+      "poster": "https://picsum.photos/id/1053/500/750",
+      "category": "Romance",
+      "type": "Free",
+      "rating": 7.9,
+      "releaseYear": 2020,
+      "size": "1.2 GB",
+      "downloadLink": "https://example.com/download/secret-letters"
+    },
+    {
+      "id": 20,
+      "title": "Midnight Promises",
+      "description": "Two people meet at a masquerade and their lives change forever.",
+      "poster": "https://picsum.photos/id/1054/500/750",
+      "category": "Romance",
+      "type": "Premium",
+      "rating": 8.2,
+      "releaseYear": 2023,
+      "size": "1.5 GB",
+      "downloadLink": "https://example.com/download/midnight-promises"
+    }
+  ],
+  "Horror": [
+    {
+      "id": 21,
+      "title": "Haunted Manor",
+      "description": "A family moves into a manor only to discover terrifying secrets.",
+      "poster": "https://picsum.photos/id/1061/500/750",
+      "category": "Horror",
+      "type": "Premium",
+      "rating": 8.4,
+      "releaseYear": 2022,
+      "size": "1.4 GB",
+      "downloadLink": "https://example.com/download/haunted-manor"
+    },
+    {
+      "id": 22,
+      "title": "Night Whispers",
+      "description": "Strange voices haunt a small town, revealing dark pasts.",
+      "poster": "https://picsum.photos/id/1062/500/750",
+      "category": "Horror",
+      "type": "Free",
+      "rating": 7.8,
+      "releaseYear": 2021,
+      "size": "1.2 GB",
+      "downloadLink": "https://example.com/download/night-whispers"
+    },
+    {
+      "id": 23,
+      "title": "Cursed Lake",
+      "description": "A group of friends stumble upon a lake cursed by vengeful spirits.",
+      "poster": "https://picsum.photos/id/1063/500/750",
+      "category": "Horror",
+      "type": "Premium",
+      "rating": 8.0,
+      "releaseYear": 2020,
+      "size": "1.3 GB",
+      "downloadLink": "https://example.com/download/cursed-lake"
+    },
+    {
+      "id": 24,
+      "title": "Shadow Alley",
+      "description": "An urban legend comes alive in the darkest streets of the city.",
+      "poster": "https://picsum.photos/id/1064/500/750",
+      "category": "Horror",
+      "type": "Free",
+      "rating": 7.7,
+      "releaseYear": 2023,
+      "size": "1.4 GB",
+      "downloadLink": "https://example.com/download/shadow-alley"
+    }
+  ],
+  "Drama": [
+    {
+      "id": 25,
+      "title": "Broken Dreams",
+      "description": "A young artist struggles to overcome personal and professional challenges.",
+      "poster": "https://picsum.photos/id/1071/500/750",
+      "category": "Drama",
+      "type": "Premium",
+      "rating": 8.5,
+      "releaseYear": 2022,
+      "size": "1.5 GB",
+      "downloadLink": "https://example.com/download/broken-dreams"
+    },
+    {
+      "id": 26,
+      "title": "Silent Echo",
+      "description": "A touching story of family, love, and forgiveness.",
+      "poster": "https://picsum.photos/id/1072/500/750",
+      "category": "Drama",
+      "type": "Free",
+      "rating": 8.0,
+      "releaseYear": 2021,
+      "size": "1.3 GB",
+      "downloadLink": "https://example.com/download/silent-echo"
+    },
+    {
+      "id": 27,
+      "title": "Fading Memories",
+      "description": "A man returns to his hometown to reconcile with his past.",
+      "poster": "https://picsum.photos/id/1073/500/750",
+      "category": "Drama",
+      "type": "Premium",
+      "rating": 8.2,
+      "releaseYear": 2020,
+      "size": "1.4 GB",
+      "downloadLink": "https://example.com/download/fading-memories"
+    },
+    {
+      "id": 28,
+      "title": "Tides of Fate",
+      "description": "Two strangers’ lives intertwine in unexpected ways.",
+      "poster": "https://picsum.photos/id/1074/500/750",
+      "category": "Drama",
+      "type": "Free",
+      "rating": 7.9,
+      "releaseYear": 2023,
+      "size": "1.3 GB",
+      "downloadLink": "https://example.com/download/tides-of-fate"
+    }
+  ],
+  "Animation": [
+    {
+      "id": 29,
+      "title": "Dreamscape",
+      "description": "A magical world where imagination comes alive in animated adventures.",
+      "poster": "https://picsum.photos/id/1081/500/750",
+      "category": "Animation",
+      "type": "Free",
+      "rating": 8.3,
+      "releaseYear": 2021,
+      "size": "1.2 GB",
+      "downloadLink": "https://example.com/download/dreamscape"
+    },
+    {
+      "id": 30,
+      "title": "Tiny Heroes",
+      "description": "Small creatures embark on a big journey to save their village.",
+      "poster": "https://picsum.photos/id/1082/500/750",
+      "category": "Animation",
+      "type": "Premium",
+      "rating": 8.1,
+      "releaseYear": 2020,
+      "size": "1.4 GB",
+      "downloadLink": "https://example.com/download/tiny-heroes"
+    },
+    {
+      "id": 31,
+      "title": "Sky Kingdom",
+      "description": "A flying kingdom faces challenges from a dark power.",
+      "poster": "https://picsum.photos/id/1083/500/750",
+      "category": "Animation",
+      "type": "Free",
+      "rating": 7.8,
+      "releaseYear": 2022,
+      "size": "1.3 GB",
+      "downloadLink": "https://example.com/download/sky-kingdom"
+    },
+    {
+      "id": 32,
+      "title": "Magic Forest",
+      "description": "Adventures of mystical creatures living in an enchanted forest.",
+      "poster": "https://picsum.photos/id/1084/500/750",
+      "category": "Animation",
+      "type": "Premium",
+      "rating": 8.2,
+      "releaseYear": 2023,
+      "size": "1.5 GB",
+      "downloadLink": "https://example.com/download/magic-forest"
+    }
+  ],
+  "Thriller": [
+    {
+      "id": 33,
+      "title": "Silent Hunt",
+      "description": "A detective hunts a serial killer who leaves cryptic messages.",
+      "poster": "https://picsum.photos/id/1091/500/750",
+      "category": "Thriller",
+      "type": "Premium",
+      "rating": 8.4,
+      "releaseYear": 2022,
+      "size": "1.5 GB",
+      "downloadLink": "https://example.com/download/silent-hunt"
+    },
+    {
+      "id": 34,
+      "title": "Dark Signal",
+      "description": "A mysterious broadcast leads a journalist to uncover a deadly secret.",
+      "poster": "https://picsum.photos/id/1092/500/750",
+      "category": "Thriller",
+      "type": "Free",
+      "rating": 7.9,
+      "releaseYear": 2021,
+      "size": "1.3 GB",
+      "downloadLink": "https://example.com/download/dark-signal"
+    },
+    {
+      "id": 35,
+      "title": "Midnight Chase",
+      "description": "A cat-and-mouse game unfolds on the streets during the night.",
+      "poster": "https://picsum.photos/id/1093/500/750",
+      "category": "Thriller",
+      "type": "Premium",
+      "rating": 8.1,
+      "releaseYear": 2020,
+      "size": "1.4 GB",
+      "downloadLink": "https://example.com/download/midnight-chase"
+    },
+    {
+      "id": 36,
+      "title": "Hidden Truth",
+      "description": "A journalist uncovers a conspiracy that puts her life at risk.",
+      "poster": "https://picsum.photos/id/1094/500/750",
+      "category": "Thriller",
+      "type": "Free",
+      "rating": 7.8,
+      "releaseYear": 2023,
+      "size": "1.3 GB",
+      "downloadLink": "https://example.com/download/hidden-truth"
+    }
+  ],
+  "Fantasy": [
+    {
+      "id": 37,
+      "title": "Crystal Realm",
+      "description": "A young hero embarks on a journey to find the magical crystals of power.",
+      "poster": "https://picsum.photos/id/1101/500/750",
+      "category": "Fantasy",
+      "type": "Premium",
+      "rating": 8.5,
+      "releaseYear": 2022,
+      "size": "1.6 GB",
+      "downloadLink": "https://example.com/download/crystal-realm"
+    },
+    {
+      "id": 38,
+      "title": "Dragon's Keep",
+      "description": "A kingdom fights to protect the last dragon from dark forces.",
+      "poster": "https://picsum.photos/id/1102/500/750",
+      "category": "Fantasy",
+      "type": "Free",
+      "rating": 8.0,
+      "releaseYear": 2021,
+      "size": "1.4 GB",
+      "downloadLink": "https://example.com/download/dragons-keep"
+    },
+    {
+      "id": 39,
+      "title": "Enchanted Path",
+      "description": "A mysterious path leads travelers to a land of wonders and danger.",
+      "poster": "https://picsum.photos/id/1103/500/750",
+      "category": "Fantasy",
+      "type": "Premium",
+      "rating": 8.3,
+      "releaseYear": 2020,
+      "size": "1.5 GB",
+      "downloadLink": "https://example.com/download/enchanted-path"
+    },
+    {
+      "id": 40,
+      "title": "Realm of Shadows",
+      "description": "Dark forces rise as heroes attempt to save their magical world.",
+      "poster": "https://picsum.photos/id/1104/500/750",
+      "category": "Fantasy",
+      "type": "Free",
+      "rating": 7.9,
+      "releaseYear": 2023,
+      "size": "1.4 GB",
+      "downloadLink": "https://example.com/download/realm-of-shadows"
+    }
+  ]
+}
+
