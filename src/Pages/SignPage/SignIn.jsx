@@ -5,7 +5,7 @@ const SignIn = () => {
     <div className="hero bg-base-200">
       <div className="hero-content flex flex-col ">
         <div className="text-center lg:text-left">
-          <h1 className="text-2xl md:text-4xl font-bold">Signin now!</h1>
+          <h1 className="text-2xl md:text-4xl font-bold">Sign In now!</h1>
         </div>
         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
           <div className="card-body">

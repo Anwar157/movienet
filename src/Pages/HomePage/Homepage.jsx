@@ -1,9 +1,12 @@
 import React from "react";
+import Carousel from "../../Components/Carousel/Carousel";
+import MovieCard from "../../Components/MovieCard/MovieCard";
 
 const Homepage = () => {
   return (
     <div>
-      <h2>this is home page</h2>
+      <Carousel></Carousel>
+      <MovieCard></MovieCard>
     </div>
   );
 };
