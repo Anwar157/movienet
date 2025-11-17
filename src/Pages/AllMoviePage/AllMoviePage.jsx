@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const MovieCard = () => {
+const AllMoviePage = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -9,10 +9,9 @@ const MovieCard = () => {
       .then((data) => setMovies(data))
       .catch((err) => console.error(err));
   }, []);
-
   return (
     <div className="flex flex-wrap justify-center">
-      {movies.slice(0, 10).map((movie) => (
+      {movies.map((movie) => (
         <div
           key={movie.id}
           className="card bg-base-100 w-[300px] shadow-sm m-4">
@@ -46,4 +45,4 @@ const MovieCard = () => {
   );
 };
 
-export default MovieCard;
+export default AllMoviePage;

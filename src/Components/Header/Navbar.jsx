@@ -19,16 +19,18 @@ const Navbar = () => {
           </button>
 
           {/* Logo */}
-          <h2 className="font-bold text-xl text-white md:text-4xl">
-            Movie<span className="text-amber-700">Net</span>
-          </h2>
+          <Link to="/">
+            <h2 className="font-bold text-xl text-white md:text-4xl">
+              Movie<span className="text-amber-700">Net</span>
+            </h2>
+          </Link>
         </div>
 
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-x-4 text-white">
           <Link to="/">Home</Link>
-          <Link to="/">All Movies</Link>
-          <Link to="/">My Collection</Link>
+          <Link to="/allMovies">All Movies</Link>
+          <Link to="/myCollection">My Collection</Link>
         </div>
 
         {/* Buttons */}
