@@ -54,10 +54,10 @@ const Navbar = () => {
           <Link to="/" className="hover:text-amber-400">
             Home
           </Link>
-          <Link to="/" className="hover:text-amber-400">
+          <Link to="/allMovies" className="hover:text-amber-400">
             All Movies
           </Link>
-          <Link to="/" className="hover:text-amber-400">
+          <Link to="/myCollection" className="hover:text-amber-400">
             My Collection
           </Link>
           <div className="flex gap-x-3 mt-2">

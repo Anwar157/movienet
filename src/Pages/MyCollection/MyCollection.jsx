@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const MyCollection = () => {
   const { user } = useContext(AuthContext);
