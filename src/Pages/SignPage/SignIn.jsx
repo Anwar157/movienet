@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { useNavigate } from "react-router";
+import toast from "react-hot-toast";
 
 const SignIn = () => {
   const { registerUser, updateUserProfile } = useContext(AuthContext);
@@ -25,6 +26,7 @@ const SignIn = () => {
 
       // 2. Update profile
       await updateUserProfile(name, photo);
+      toast.success("Account created successfully!");
 
       // 3. Redirect to home
       navigate("/");
