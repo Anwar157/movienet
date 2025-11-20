@@ -4,10 +4,9 @@ import { useNavigate } from "react-router";
 import toast from "react-hot-toast";
 
 const SignIn = () => {
-  const { registerUser, updateUserProfile } = useContext(AuthContext);
+  const { registerUser, updateUserProfile, googleLogin } =
+    useContext(AuthContext);
   const navigate = useNavigate();
-
-  // toggle sign in
 
   const [name, setName] = useState("");
   const [photo, setPhoto] = useState("");
@@ -33,6 +32,19 @@ const SignIn = () => {
     } catch (err) {
       setError(err.message);
     }
+  };
+
+  //  Google Sign In
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then(() => {
+        toast.success("Logged in with Google!");
+        navigate("/");
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error(err.message);
+      });
   };
 
   return (
@@ -78,6 +90,14 @@ const SignIn = () => {
 
             <button className="btn btn-neutral mt-4 w-full">
               Create Account
+            </button>
+
+            {/* GOOGLE LOGIN BUTTON */}
+            <button
+              type="button"
+              onClick={handleGoogleLogin}
+              className="btn btn-outline mt-2 w-full">
+              Continue with Google
             </button>
           </form>
         </div>
