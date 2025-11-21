@@ -5,11 +5,11 @@ import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
   const { user } = useContext(AuthContext);
 
   return (
     <nav className="bg-indigo-700 w-full">
-      {/* Top Bar */}
       <div className="flex justify-between items-center max-w-7xl mx-auto p-3">
         {/* Logo + Mobile Menu */}
         <div className="flex items-center gap-x-2">
@@ -53,7 +53,10 @@ const Navbar = () => {
 
           {/* IF Logged In → Show profile photo + dropdown */}
           {user && (
-            <div className="relative group cursor-pointer">
+            <div
+              className="relative group cursor-pointer"
+              onMouseEnter={() => setShowDropdown(true)}
+              onMouseLeave={() => setShowDropdown(false)}>
               <img
                 src={user.photoURL}
                 alt="profile"
@@ -61,7 +64,10 @@ const Navbar = () => {
               />
 
               {/* Hover dropdown */}
-              <div className="absolute right-0 mt-2 hidden group-hover:block bg-white text-black p-3 rounded shadow-lg w-48 z-50">
+              <div
+                className={`absolute right-0 mt-2 bg-white text-black p-4 rounded shadow-lg w-56 transition-all duration-200 z-50 ${
+                  showDropdown ? "opacity-100 visible" : "opacity-0 invisible"
+                }`}>
                 <p className="font-semibold">{user.displayName}</p>
                 <p className="text-sm text-gray-600">{user.email}</p>
 
