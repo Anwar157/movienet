@@ -1,7 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const MovieCard = () => {
   const [movies, setMovies] = useState([]);
+  const { user } = useContext(AuthContext);
 
   useEffect(() => {
     fetch("http://localhost:3000/movies")
@@ -9,6 +12,32 @@ const MovieCard = () => {
       .then((data) => setMovies(data))
       .catch((err) => console.error(err));
   }, []);
+
+  // Handle Download → Add to My Collection
+  const handleDownload = (movie) => {
+    if (!user) {
+      toast.error("Please Sign in first!");
+      return;
+    }
+
+    fetch(`http://localhost:3000/add-to-collection/${user.uid}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(movie),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          toast.success("Movie added to your collection!");
+        } else {
+          toast.error("Failed to add movie.");
+        }
+      })
+      .catch((err) => {
+        console.error(err);
+        toast.error("Something went wrong!");
+      });
+  };
 
   return (
     <div className="flex flex-wrap justify-center">
@@ -35,9 +64,11 @@ const MovieCard = () => {
               <p>Year: {movie.releaseYear}</p>
             </div>
             <div className="card-actions justify-center">
-              <a href={movie.downloadLink} className="btn btn-primary">
+              <button
+                className="btn btn-primary"
+                onClick={() => handleDownload(movie)}>
                 Download
-              </a>
+              </button>
             </div>
           </div>
         </div>

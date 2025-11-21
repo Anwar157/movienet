@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const MyCollection = () => {
   const { user } = useContext(AuthContext);
@@ -10,23 +11,25 @@ const MyCollection = () => {
 
     fetch(`http://localhost:3000/my-collection/${user.uid}`)
       .then((res) => res.json())
-      .then((data) => setCollection(data));
+      .then((data) => setCollection(data))
+      .catch((err) => console.error(err));
   }, [user]);
 
-  const handleRemove = (movieId) => {
-    fetch(
-      `http://localhost:3000/remove-from-collection/${user.uid}/${movieId}`,
-      { method: "DELETE" }
-    )
+  const handleRemove = (id) => {
+    fetch(`http://localhost:3000/remove-from-collection/${user.uid}/${id}`, {
+      method: "DELETE",
+    })
       .then((res) => res.json())
       .then(() => {
-        setCollection(collection.filter((m) => m.movieId !== movieId));
-      });
+        setCollection(collection.filter((movie) => movie.id !== id));
+        toast.success("Movie removed from your collection!");
+      })
+      .catch(() => toast.error("Failed to remove movie!"));
   };
 
   return (
     <div className="max-w-6xl mx-auto py-10 px-4">
-      <h1 className="text-3xl font-bold mb-8 text-white">🎬 My Collection</h1>
+      <h1 className="text-3xl font-bold mb-8 text-white"> My Collection</h1>
 
       {collection.length === 0 ? (
         <p className="text-gray-300 text-lg">No saved movies yet...</p>
@@ -34,7 +37,7 @@ const MyCollection = () => {
         <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
           {collection.map((movie) => (
             <div
-              key={movie.movieId}
+              key={movie.id}
               className="bg-gray-900 shadow-lg rounded-xl overflow-hidden border border-gray-700">
               <img
                 src={movie.poster}
@@ -62,7 +65,7 @@ const MyCollection = () => {
                   </button>
 
                   <button
-                    onClick={() => handleRemove(movie.movieId)}
+                    onClick={() => handleRemove(movie.id)}
                     className="px-3 py-1 bg-red-600 text-white rounded-md text-sm hover:bg-red-700">
                     Remove
                   </button>
