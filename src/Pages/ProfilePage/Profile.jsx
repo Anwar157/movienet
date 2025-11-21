@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
-import { Navigate } from "react-router";
+import { Navigate, useNavigate } from "react-router";
 import toast from "react-hot-toast";
 
 const Profile = () => {
@@ -11,6 +11,7 @@ const Profile = () => {
   const [photo, setPhoto] = useState(user?.photoURL || "");
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleUpdate = async (e) => {
     e.preventDefault();
@@ -24,7 +25,7 @@ const Profile = () => {
       });
 
       toast.success("Profile update is Successfully!");
-      Navigate("/");
+      navigate("/");
     } catch (err) {
       setError(err.message);
     }
