@@ -2,11 +2,13 @@ import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { AuthContext } from "../../provider/AuthProvider";
 import toast from "react-hot-toast";
+import { Eye, EyeOff } from "lucide-react";
 
 const Login = () => {
   // input field state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   // AuthContext to login function taken
   const { loginUser } = useContext(AuthContext);
@@ -49,14 +51,22 @@ const Login = () => {
                 required
                 onChange={(e) => setEmail(e.target.value)}
               />
+              {/* Password with Eye Icon */}
               <label className="label">Password</label>
-              <input
-                type="password"
-                className="input"
-                placeholder="Password"
-                required
-                onChange={(e) => setPassword(e.target.value)}
-              />
+              <div className="relative">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  className="input input-bordered w-full"
+                  placeholder="Password"
+                  required
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <span
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3 top-3 cursor-pointer">
+                  {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                </span>
+              </div>
               <div>
                 <a className="link link-hover">Forgot password?</a>
               </div>
