@@ -6,6 +6,7 @@ import Login from "../Pages/LoginPage/Login";
 import SignIn from "../Pages/SignPage/SignIn";
 import AllMoviePage from "../Pages/AllMoviePage/AllMoviePage";
 import MyCollection from "../Pages/MyCollection/MyCollection";
+import Profile from "../Pages/ProfilePage/Profile";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
       { path: "/signin", element: <SignIn></SignIn> },
       { path: "/allMovies", element: <AllMoviePage></AllMoviePage> },
       { path: "myCollection", element: <MyCollection></MyCollection> },
+      { path: "/profile", element: <Profile></Profile> },
     ],
   },
   {
