@@ -15,17 +15,24 @@ const MyCollection = () => {
       .catch((err) => console.error(err));
   }, [user]);
 
-  const handleRemove = (id) => {
-    fetch(`http://localhost:3000/remove-from-collection/${user.uid}/${id}`, {
-      method: "DELETE",
-    })
+  const handleRemove = (movieId) => {
+    fetch(
+      `http://localhost:3000/remove-from-collection/${user.uid}/${movieId}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((res) => res.json())
       .then(() => {
-        setCollection(collection.filter((movie) => movie.id !== id));
+        setCollection(collection.filter((movie) => movie._id !== movieId));
         toast.success("Movie removed from your collection!");
       })
       .catch(() => toast.error("Failed to remove movie!"));
   };
+  console.log(
+    "Current Collection IDs:",
+    collection.map((m) => m.movieId)
+  );
 
   return (
     <div className="max-w-6xl mx-auto py-10 px-4">
@@ -37,7 +44,7 @@ const MyCollection = () => {
         <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6">
           {collection.map((movie) => (
             <div
-              key={movie.id}
+              key={movie._id}
               className="bg-gray-900 shadow-lg rounded-xl overflow-hidden border border-gray-700">
               <img
                 src={movie.poster}
@@ -65,7 +72,7 @@ const MyCollection = () => {
                   </button>
 
                   <button
-                    onClick={() => handleRemove(movie.id)}
+                    onClick={() => handleRemove(movie._id)}
                     className="px-3 py-1 bg-red-600 text-white rounded-md text-sm hover:bg-red-700">
                     Remove
                   </button>

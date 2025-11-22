@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const AllMoviePage = () => {
+  const { user } = useContext(AuthContext);
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -9,11 +12,48 @@ const AllMoviePage = () => {
       .then((data) => setMovies(data))
       .catch((err) => console.error(err));
   }, []);
+
+  const handleDownload = async (movie) => {
+    if (!user) {
+      toast.error("Please login first!");
+      return;
+    }
+
+    const payload = {
+      _id: movie._id,
+      title: movie.title,
+      poster: movie.poster,
+      category: movie.category,
+      downloadedAt: new Date(),
+    };
+
+    try {
+      const res = await fetch(
+        `http://localhost:3000/add-to-collection/${user.uid}`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      const data = await res.json();
+
+      if (data.success) {
+        toast.success("Movie added to your collection!");
+      } else {
+        toast.error("Failed to save movie!");
+      }
+    } catch (error) {
+      toast.error("Server error!");
+      console.error(error);
+    }
+  };
   return (
     <div className="flex flex-wrap justify-center">
       {movies.map((movie) => (
         <div
-          key={movie.id}
+          key={movie._id}
           className="card bg-base-100 w-[300px] shadow-sm m-4">
           <figure>
             <img
@@ -34,9 +74,11 @@ const AllMoviePage = () => {
               <p>Year: {movie.releaseYear}</p>
             </div>
             <div className="card-actions justify-center">
-              <a href={movie.downloadLink} className="btn btn-primary">
+              <button
+                onClick={() => handleDownload(movie)}
+                className="btn btn-primary">
                 Download
-              </a>
+              </button>
             </div>
           </div>
         </div>

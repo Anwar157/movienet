@@ -100,7 +100,7 @@ const SignIn = () => {
             {error && <p className="text-red-500">{error}</p>}
 
             {/* Create Account Button */}
-            <button className="btn btn-neutral mt-4 w-full">
+            <button className="btn btn-neutral mt-4 w-full bg-orange-800 border-none">
               Create Account
             </button>
 
@@ -108,7 +108,7 @@ const SignIn = () => {
             <button
               type="button"
               onClick={handleGoogleLogin}
-              className="btn btn-outline mt-2 w-full">
+              className="btn btn-outline mt-2 w-full bg-green-200 border-none">
               Continue with Google
             </button>
           </form>

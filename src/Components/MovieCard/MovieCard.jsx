@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router";
 
 const MovieCard = () => {
   const [movies, setMovies] = useState([]);
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("http://localhost:3000/movies")
@@ -17,6 +19,7 @@ const MovieCard = () => {
   const handleDownload = (movie) => {
     if (!user) {
       toast.error("Please Sign in first!");
+      navigate("/signin");
       return;
     }
 
