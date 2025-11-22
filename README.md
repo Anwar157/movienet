@@ -1,16 +1,22 @@
-# React + Vite
+** Movie Collection App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Movie Collection App is a web application where users can browse movies, download them, and add them to their personal My Collection page. Built with React, Node.js, Express, and MongoDB.
 
-Currently, two official plugins are available:
+** Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ 1. Display popular movies on the Home Page.  
+ 2. Browse all movies on the All Movies Page.  
+ 3. Download movies directly.  
+ 4. Logged-in users can add movies to My Collection.  
+ 5. Remove movies from My Collection.  
+ 6. Data stored in MongoDB.  
+ 7. Redirects to Signin Page if user is not logged in.  
+ 8. Responsive and user-friendly UI.
 
-## React Compiler
+ ** Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  Frontend: React, React Router, TailwindCSS / DaisyUI, Swiper  
+  Backend: Node.js, Express  
+  Database: MongoDB (Atlas)  
+  Authentication: Context API (Custom AuthProvider)  
+  Notifications: react-hot-toast  
